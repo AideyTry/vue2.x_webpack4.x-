@@ -1,3 +1,3 @@
 module.exports = {
-  mode: 'production', //development production
+  mode: 'production' //development production
 }
