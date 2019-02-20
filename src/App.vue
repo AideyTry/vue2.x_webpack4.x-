@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <p>我是app{{name}}</p>
+    <!-- 登入动画 -->
+    <!-- <transition> -->
+      <router-view></router-view>
+    <!-- </transition> -->
   </div>
 </template>
 <script>
 export default {
+  name: 'App',
   data () {
     return {
-      name: 'webpack4.x + vue2.x'
     }
   }
 }
