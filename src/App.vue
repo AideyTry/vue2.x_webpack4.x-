@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <!-- 登入动画 -->
-    <!-- <transition> -->
+    <transition>
       <router-view></router-view>
-    <!-- </transition> -->
+    </transition>
   </div>
 </template>
 <script>
