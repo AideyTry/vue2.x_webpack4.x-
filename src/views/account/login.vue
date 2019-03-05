@@ -44,7 +44,7 @@ export default {
           return
         }
         setToken(data.data.token)
-        this.$router.replace({ name: 'layout' })
+        this.$router.push({ name: 'layout' })
       })
     }
   }

@@ -28,6 +28,8 @@ router.beforeEach((to, from, next) => {
   // 通过meta字段来判断，有登录状态的页面需要在登录之后才能进入，无需登录状态的页面可直接进入。
   if(to.matched.some(record => record.meta.requiresAuth)){
     console.log('getToken()=', getToken())
+    console.log('from1=', from)
+    console.log('to1=', to)
     if(!getToken()){
       next({
         path: '/login',
@@ -35,6 +37,8 @@ router.beforeEach((to, from, next) => {
       })
     } else {
       next()
+      console.log('to1=', to)
+      console.log('from2=', from)
     }
   } else {
     next()
