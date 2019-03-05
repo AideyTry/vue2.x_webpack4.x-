@@ -1,7 +1,7 @@
 <template>
   <div class="login-wrap">
     <div class="login">
-      <h2>标题</h2>
+      <h2>登录界面</h2>
       <input
         type="text"
         placeholder="请输入用户名"
