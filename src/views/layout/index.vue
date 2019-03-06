@@ -4,10 +4,12 @@
 
 <script>
 export default {
-
+  name: 'layout',
+  data () {
+    return {}
+  }
 }
 </script>
 
 <style scoped lang="css">
-
 </style>

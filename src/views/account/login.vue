@@ -31,6 +31,8 @@ export default {
       }
     }
   },
+  mounted () {
+  },
   methods: {
     login () {
       let params = {
