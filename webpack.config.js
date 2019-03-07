@@ -13,8 +13,8 @@ module.exports = {
     extensions: ['.js','.vue','.json'],  // .js,.vue,.json文件可以忽略后缀，按先后顺序查找
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': path.resolve('src'),
-      'views': path.resolve('src/views')
+      '@': path.join(__dirname, './src'),
+      'views': path.join(__dirname, './src/views')
     }
   },
   plugins: [

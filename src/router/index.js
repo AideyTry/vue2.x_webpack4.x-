@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import { getToken } from '@/utils/auth'
-// import Layout from views/layout
+import Layout from 'views/layout'
 Vue.use(Router)
 
 const routes = [
@@ -11,11 +11,11 @@ const routes = [
     component: resolve => require(['views/account/login'], resolve)
   },
   {
-    path: '',
+    path: '/',
     name: 'layout',
     // redirect: {name: 'layout'},
     meta: { requiresAuth: true },
-    compoment: resolve => require(['views/layout/index.vue'], resolve)
+    compoment: Layout
   }
 
 ]
@@ -38,20 +38,7 @@ router.beforeEach((to, from, next) => {
         // query: { redirect: to.fullPath } //把要跳转的地址作为参数传到下一步
       })
     } else {
-      next('/')
-      // return
-      // if (Object.keys(form.query).length === 0) {
-      //   next()
-      // } else {
-      //   let redirect = form.query.redirect
-      //   if (to.path === redirect) {
-      //     next()
-      //   } else {
-      //     next({ path: '/login' })
-      //   }
-      // }
-      // console.log('to1=', to)
-      // console.log('from2=', from)
+      next()
     }
   } else {
     next()
